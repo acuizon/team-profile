@@ -1,0 +1,22 @@
+@import "bourbon/bourbon";
+@import "foundation_and_overrides.scss";
+
+div.gradient-bg {
+  @include linear-gradient(45deg, $black 0%, $dark-blue 50%, $black 51%, $dark-blue 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.player-profile {
+  padding: 15px 0;
+}
+
+.top-bar {
+  @include linear-gradient(to right, $dark-gray, $darker-gray 90%);
+}
+
+section.players {
+  padding-top: 50px;
+}
