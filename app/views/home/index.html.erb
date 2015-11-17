@@ -1,15 +1,23 @@
-<section class="players">
+<ul class="small-block-grid-2">
   <% @players.each do |player| %>
-    <div class="row player-profile">
-      <div class="columns small-4">
-        <h4><%= player.display_name %></h4>
-        <%= image_tag player.avatar_full %>
+    <li>
+      <div class="small-12">
+        <center>
+          <%= player.display_name %>
+          <br>
+          <%= image_tag(player.avatar_full) %>
+        </center>
       </div>
-      <div class="columns small-8">
-        <span class="secondary label">Steam Profile:</span>
-        <%= link_to player.profile_url, player.profile_url %>
+      <div class="small-12">
+        <center>
+          <% player.matches.each do |match| %>
+            <% player.items(match).each do |item| %>
+              <%= image_tag item.first, alt: item.last, class: "dota-item" %>
+            <% end %>
+            <br>
+          <% end %>
+        </center>
       </div>
-    </div>
-    <br>
+    </li>
   <% end %>
-</section>
+</ul>

@@ -1,12 +1,18 @@
 @import "bourbon/bourbon";
 @import "foundation_and_overrides.scss";
 
+body {
+}
+
 div.gradient-bg {
-  @include linear-gradient(45deg, $black 0%, $dark-blue 50%, $black 51%, $dark-blue 100%);
+  @include linear-gradient(45deg, $white 0%, $gray 50%, $white 51%, $gray 100%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+div.logo {
 }
 
 div.player-profile {
@@ -19,4 +25,8 @@ div.player-profile {
 
 section.players {
   padding-top: 50px;
+}
+
+.dota-item {
+  height: 32px;
 }

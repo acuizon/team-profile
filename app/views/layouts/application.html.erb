@@ -13,9 +13,11 @@
   </head>
 
   <body>
-    <div class="gradient-bg">
+    <div class="row gradient-bg">
       <div class="row">
-        <center><%= image_tag "logo.png", class: "text-center" %></center>
+        <div class="logo">
+          <center><%= image_tag "logo.png" %></center>
+        </div>
         <%= render partial: "shared/nav" %>
       </div>
       <div class="row">
